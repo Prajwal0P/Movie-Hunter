@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'MovieHunter';
+  src: url('/fonts/MovieHunter.woff2') format('woff2'); /* adjust path as needed */
+}
+
+body {
+  font-family: 'MovieHunter', sans-serif;
+  background-color: black;
+}
+
