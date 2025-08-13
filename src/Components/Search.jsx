@@ -25,7 +25,9 @@ const Search = () => {
     setIsLoading(true);
     try {
       const { data: movieData } = await axios.get(
-        `https://www.omdbapi.com/?t=${encodeURIComponent(input)}&apikey=fb90ec0f`
+        `https://www.omdbapi.com/?t=${encodeURIComponent(
+          input
+        )}&apikey=fb90ec0f`
       );
 
       if (movieData.Response === "True") {
@@ -99,15 +101,15 @@ const Search = () => {
           ref={cardRef}
           className="relative w-full max-w-xs sm:max-w-md md:max-w-2xl flex justify-center"
         >
+          <MovieDetails data={data} />
           <button
             onClick={handleClose}
             disabled={isClosing}
             aria-label="Close movie details"
-            className="absolute top-2 right-2 text-white bg-gray-800 bg-opacity-70 rounded-full w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center hover:bg-gray-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="absolute top-2 right-2 z-[50] text-white bg-gray-800 bg-opacity-70 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-gray-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             &#x2715;
           </button>
-          <MovieDetails data={data} />
         </div>
       )}
     </div>
