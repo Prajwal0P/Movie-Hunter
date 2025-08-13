@@ -17,7 +17,7 @@ const Search = () => {
     const input = movie.trim();
 
     if (!input) {
-      setMessage("⚠️ Please enter a movie name!");
+      setMessage("⚠️ Please enter a movie name! 🙈");
       setData(null);
       return;
     }
